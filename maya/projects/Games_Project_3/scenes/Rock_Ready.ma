@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: Rock2.ma
-//Last modified: Mon, Oct 07, 2019 05:26:21 PM
+//Name: Rock_Ready.ma
+//Last modified: Mon, Oct 07, 2019 05:32:51 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -149,22 +149,22 @@ createNode mesh -n "RockShape" -p "Rock";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "FE897103-41CB-1C25-C280-689E43ED0146";
+	rename -uid "D7477429-4C9B-88D6-A8B2-C483F37FF0E4";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "553658CC-4E12-EDAA-E532-26B017B86CBD";
+	rename -uid "E07A39B6-40A7-63EC-F1B2-A1AE93D37F77";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8C7F5FF5-4A44-83C8-6106-5C9E107DFC3B";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "73483228-4459-6F69-4126-E280DFF9FC79";
+	rename -uid "E8E75AD3-4738-92F4-C41A-B99BD3DFC2A0";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "7BF162FA-4D42-114E-E88A-308C2ED42F21";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5BC9F527-46DF-8E43-4628-239E758F4B69";
+	rename -uid "84D104EF-456E-35A3-ED30-DD97A2889365";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "01A3A0E4-4FF8-8313-2B1F-09B84A591D8C";
+	rename -uid "C5372168-4329-D3A7-5740-10A011722F53";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "9C951153-4BFD-E77C-0045-3190E3AEB2DC";
 	setAttr ".b" -type "string" (
@@ -251,4 +251,4 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "RockShape.iog" ":initialShadingGroup.dsm" -na;
-// End of Rock2.ma
+// End of Rock_Ready.ma
